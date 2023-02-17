@@ -4,24 +4,24 @@
 
 function getComputerChoice() {
 
-    let randomNumber = Math.floor(Math.random() * 10);
-
-    if (randomNumber >= 0 && randomNumber < 4) {
-        return 'rock';
-
-    } else if (randomNumber >= 4 && randomNumber < 7) {
-        return 'paper';
-
-    } else {
-        return 'scissors';
+    let randomNumber = Math.floor(Math.random() * 3);
+    
+        if (randomNumber === 0 ) {
+            return 'rock';
+    
+        } else if (randomNumber === 1 ) {
+            return 'paper';
+    
+        } else {
+            return 'scissors';
+        }
+    
     }
 
-}
-
-console.log(getComputerChoice());
-
 /*A function that plays a single round of the game*/
-
+    
+    let loss;
+    let win;
 
 function playRound(playerSelection, computerSelection) {
 
@@ -58,16 +58,12 @@ function playRound(playerSelection, computerSelection) {
         }
     
     }
-    
-    let loss;
-    let win;
+
     
     let playerSelection; 
     
     let computerSelection;
-    
-console.log(playRound());
-
+   
 
 /* A functon that plays 5 rounds  */
 
