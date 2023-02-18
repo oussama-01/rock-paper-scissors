@@ -60,13 +60,45 @@ function playRound(playerSelection, computerSelection) {
     }
 
     
-    let playerSelection; 
-    
-    let computerSelection;
-   
+let playerSelection;
+let computerSelection;
+
+let computerScore = 0;
+let playerScore = 0;
 
 /* A functon that plays 5 rounds  */
 
+    function game() {
+
+
+        for (let i = 0; i < 5; i++) {
+
+            playerSelection = prompt("enter your choice").toLowerCase();
+            computerSelection = getComputerChoice();
+
+            console.log(playRound(playerSelection, computerSelection));
+
+
+            if (playRound(playerSelection, computerSelection) === loss) {
+                computerScore++;
+            } else if (playRound(playerSelection, computerSelection) === win) {
+                playerScore++;
+            }
+
+        }
+
+        console.log(`Player score: ${playerScore} Computer score: ${computerScore}`);
+
+        if (playerScore > computerScore) {
+            console.log("You are the winner")
+        } else if (playerScore < computerScore) {
+            console.log("The computer is the winner");
+        } else {
+            console.log('Even');
+        }
+    }
+
+    console.log(game());
 
 
 
