@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
     
     
         if (playerSelection === 'paper' && computerSelection === 'paper') {
-            return 'even';
+            return 'Even';
         } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
             return loss;
         } else if (playerSelection === 'paper' && computerSelection === 'rock') {
@@ -40,7 +40,7 @@ function playRound(playerSelection, computerSelection) {
     
     
         if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-            return 'even';
+            return 'Even';
         } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
             return loss;
         } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
@@ -49,7 +49,7 @@ function playRound(playerSelection, computerSelection) {
     
     
         if (playerSelection === 'rock' && computerSelection === 'rock') {
-            return 'even ';
+            return 'Even ';
     
         } else if (playerSelection === 'rock' && computerSelection === 'paper') {
             return loss;
