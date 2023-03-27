@@ -73,7 +73,7 @@ let playerScore = 0;
 
         for (let i = 0; i < 5; i++) {
 
-            playerSelection = prompt("enter your choice").toLowerCase();
+            playerSelection = prompt("Enter your choice").trim().toLowerCase();
             computerSelection = getComputerChoice();
 
             console.log(playRound(playerSelection, computerSelection));
@@ -101,11 +101,6 @@ let playerScore = 0;
     console.log(game());
 
 
-
-
-
-
-// console.log();
 
 
 
