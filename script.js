@@ -1,6 +1,6 @@
 
 
-/*A function that returns either: rock, paper or scissors*/
+/* A function that returns either: rock, paper or scissors*/
 
 function getComputerChoice() {
 
@@ -18,8 +18,12 @@ function getComputerChoice() {
     
     }
 
-/*A function that plays a single round of the game*/
-    
+/* A function that plays a single round of the game*/
+        
+let playerSelection;
+let computerSelection = getComputerChoice();
+
+
     let loss;
     let win;
 
@@ -59,46 +63,10 @@ function playRound(playerSelection, computerSelection) {
     
     }
 
-    
-let playerSelection;
-let computerSelection;
-
-let computerScore = 0;
-let playerScore = 0;
 
 /* A functon that plays 5 rounds  */
 
-    function game() {
-
-
-        for (let i = 0; i < 5; i++) {
-
-            playerSelection = prompt("Enter your choice").trim().toLowerCase();
-            computerSelection = getComputerChoice();
-
-            console.log(playRound(playerSelection, computerSelection));
-
-
-            if (playRound(playerSelection, computerSelection) === loss) {
-                computerScore++;
-            } else if (playRound(playerSelection, computerSelection) === win) {
-                playerScore++;
-            }
-
-        }
-
-        console.log(`Player score: ${playerScore} Computer score: ${computerScore}`);
-
-        if (playerScore > computerScore) {
-            console.log("You are the winner")
-        } else if (playerScore < computerScore) {
-            console.log("The computer is the winner");
-        } else {
-            console.log('Even');
-        }
-    }
-
-    console.log(game());
+// removed for the adding of a UI 
 
 
 
