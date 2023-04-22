@@ -1,0 +1,47 @@
+
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+
+    border: 10px solid lightsalmon;
+    font-size: larger;
+    /*      padding: 100px 30%; */
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+}
+
+div {
+    margin: 10px;
+
+}
+
+#result {
+    border: 2px solid hotpink;
+
+}
+
+#pScore,
+#cScore {
+    border: 2px solid navy;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* 
+
+
+*/
