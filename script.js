@@ -1,6 +1,6 @@
 
 
-/* A function that returns either: rock, paper or scissors*/
+/* A function that returns randomly either: rock, paper or scissors */
 
 function getComputerChoice() {
 
@@ -146,7 +146,7 @@ function showWinner() {
         cScore.textContent = `Computer score is: ${computerScore}`;
 
         //console.log("you are the winner");
-        winner.innerHTML = " You are the winner";
+        winner.innerHTML = " YOU ARE THE WINNER";
 
 
     } else if (computerScore === 5) {
@@ -156,7 +156,7 @@ function showWinner() {
         cScore.textContent = `Computer score is: ${computerScore}`;
 
         //console.log("the computer is the winner");
-        winner.innerHTML = " The computer is the winner";
+        winner.innerHTML = " THE COMPUTER IS THE WINNER";
 
     }
 

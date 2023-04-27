@@ -2,24 +2,38 @@
 
 html {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
 
-    border: 10px solid lightsalmon;
+    border: 10px solid rgb(144, 255, 122);
     font-size: larger;
-    /*      padding: 100px 30%; */
     text-align: center;
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
 }
 
 button {
     padding: 20px;
-    margin: 10px;
+    margin: 15px;
     width: 200px;
+
+    background-color: ;
+    color: ;
+
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
 }
 
 div {
-    margin: 10px;
+    margin: 15px;
 
 }
 
@@ -34,11 +48,9 @@ div {
 
 }
 
-.container {
-    display: flex;
-    justify-content: space-around;
+#winner {
+    background-color: yellow;
 }
-
 
 
 /* 
