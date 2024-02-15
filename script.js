@@ -1,28 +1,28 @@
 
 
-/* A function that returns randomly either: rock, paper or scissors */
+// A function that returns randomly either: rock, paper or scissors 
 
 function getComputerChoice() {
 
     let randomNumber = Math.floor(Math.random() * 3);
-    
-        if (randomNumber === 0 ) {
-            return 'rock';
-    
-        } else if (randomNumber === 1 ) {
-            return 'paper';
-    
-        } else {
-            return 'scissors';
-        }
-    
+
+    if (randomNumber === 0) {
+        return 'rock';
+
+    } else if (randomNumber === 1) {
+        return 'paper';
+
+    } else {
+        return 'scissors';
     }
 
-/* A function that plays a single round of the game*/
-        
+}
 
-    let loss;
-    let win;
+// A function that plays a single round of the game
+
+
+let loss;
+let win;
 
 function playRound(playerSelection, computerSelection) {
 
@@ -30,75 +30,78 @@ function playRound(playerSelection, computerSelection) {
     loss = `You lose! ${computerSelection} beats ${playerSelection}  `;
     win = `You win!  ${playerSelection} beats ${computerSelection}  `;
 
-    
-        if (playerSelection === 'paper' && computerSelection === 'paper') {
-            return 'Tie';
-        } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-            return loss;
-        } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-            return win;
-        }
-    
-    
-        if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-            return 'Tie';
-        } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-            return loss;
-        } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-            return win;
-        }
-    
-    
-        if (playerSelection === 'rock' && computerSelection === 'rock') {
-            return 'Tie';
-    
-        } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-            return loss;
-        } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-            return win;
-        }
-    
+
+    if (playerSelection === 'paper' && computerSelection === 'paper') {
+        return 'Tie';
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return loss;
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return win;
     }
 
 
-// below begin the using of the DOM for the UI
+    if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+        return 'Tie';
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        return loss;
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return win;
+    }
+
+
+    if (playerSelection === 'rock' && computerSelection === 'rock') {
+        return 'Tie';
+
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        return loss;
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return win;
+    }
+
+}
+
+
+// Below begin the using of the DOM for the UI
 
 let playerSelection = '';
 
-let computerSelection  ='';
+let computerSelection = '';
 
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
-const result =document.getElementById('result');
+const result = document.getElementById('result');
 
 let pScore = document.querySelector('#pScore');
 let cScore = document.querySelector('#cScore');
 
 const winner = document.querySelector('#winner');
 
-let playerScore= 0;
-let computerScore =0;
+let playerScore = 0;
+let computerScore = 0;
 
 pScore.textContent = `Your Score is: ${playerScore}`;
 cScore.textContent = `Computer score is: ${computerScore}`;
 
-rock.addEventListener('click', function() {
+
+// Adiing event listeners to each button
+
+rock.addEventListener('click', function () {
 
     computerSelection = getComputerChoice();
-    playerSelection ='rock';
-    result.textContent =playRound(playerSelection, computerSelection);
+    playerSelection = 'rock';
+    result.textContent = playRound(playerSelection, computerSelection);
 
     showScore();
     showWinner();
 
 });
 
-paper.addEventListener('click', function() {
+paper.addEventListener('click', function () {
     computerSelection = getComputerChoice();
     playerSelection = 'paper';
-    result.textContent =playRound(playerSelection, computerSelection);
+    result.textContent = playRound(playerSelection, computerSelection);
 
     showScore();
     showWinner();
@@ -106,28 +109,28 @@ paper.addEventListener('click', function() {
 
 });
 
-scissors.addEventListener('click', function() {
-    computerSelection =getComputerChoice();
+scissors.addEventListener('click', function () {
+    computerSelection = getComputerChoice();
     playerSelection = 'scissors';
     result.textContent = playRound(playerSelection, computerSelection);
 
 
-showScore();
-showWinner();
+    showScore();
+    showWinner();
 });
 
 
 function showScore() {
 
-    /* incrementing scores */
+    // Incrementing scores 
     if (playRound(playerSelection, computerSelection) === win) {
         playerScore++;
 
     } else if (playRound(playerSelection, computerSelection) === loss) {
         computerScore++;
     }
-    /* display the scores */
 
+    // Display the scores
     pScore.textContent = `Your Score is: ${playerScore}`;
     cScore.textContent = `Computer score is: ${computerScore}`;
 
@@ -136,7 +139,7 @@ function showScore() {
 function showWinner() {
 
     winner.textContent = '';
-    /* end the game when someone reaches 5 */
+    // End the game when someone reaches 5 
 
     if (playerScore === 5) {
 
@@ -144,6 +147,14 @@ function showWinner() {
         computerScore = 0;
         pScore.textContent = `Your Score is: ${playerScore}`;
         cScore.textContent = `Computer score is: ${computerScore}`;
+
+        disable();
+
+        /* 
+        I can above disable the buttons by adding attribute "disabled" to them
+        1 select each buuton then setattibute method to the eelemnt...
+        then show a message: to refresh the page to pla again
+        */
 
         //console.log("you are the winner");
         winner.innerHTML = " YOU ARE THE WINNER";
@@ -155,6 +166,8 @@ function showWinner() {
         pScore.textContent = `Your Score is: ${playerScore}`;
         cScore.textContent = `Computer score is: ${computerScore}`;
 
+        disable();
+
         //console.log("the computer is the winner");
         winner.innerHTML = " THE COMPUTER IS THE WINNER";
 
@@ -163,15 +176,11 @@ function showWinner() {
 
 }
 
+// A function that disable buttons when score reaches 5 points 
+function disable() {
+    rock.setAttribute('disabled', '')
+    paper.setAttribute('disabled', '');
+    scissors.setAttribute('disabled', '');
 
+}
 
-
-
-
-/* ******END******** */
-
-
-
-/* 
-
-*/

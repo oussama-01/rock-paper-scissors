@@ -1,16 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
+/* 
+* {
+    border: 1px solid magenta;
+}
+ */
 
 html {
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 body {
+    font-family: 'Caveat', cursive;
 
-    border: 10px solid rgb(144, 255, 122);
-    font-size: larger;
+    border: 10px solid #FF5722;
+
+    font-size: 2rem;
     text-align: center;
-    opacity: 0.5;
+
+    background-color: ;
+    color: ;
 }
 
 .container {
@@ -24,12 +33,24 @@ button {
     margin: 15px;
     width: 200px;
 
-    background-color: ;
+    background-color: #FFC107;
     color: ;
 
-    font-size: 1rem;
+    font-family: 'Caveat', cursive;
     font-weight: 600;
-    font-style: italic;
+    font-size: 1.5rem;
+
+    border: none;
+    border-radius: 35px;
+}
+
+
+button:hover {
+    background-color: #FF5722;
+}
+
+button:active {
+    scale: 0.9;
 }
 
 div {
@@ -49,11 +70,5 @@ div {
 }
 
 #winner {
-    background-color: yellow;
+    background-color: ;
 }
-
-
-/* 
-
-
-*/
