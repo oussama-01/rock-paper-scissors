@@ -1,22 +1,13 @@
 
-
-// A function that returns randomly either: rock, paper or scissors 
-
+// A function that returns either ‘Rock’, ‘Paper’ or ‘Scissors'
 function getComputerChoice() {
-
-    let randomNumber = Math.floor(Math.random() * 3);
-
-    if (randomNumber === 0) {
-        return 'rock';
-
-    } else if (randomNumber === 1) {
-        return 'paper';
-
-    } else {
-        return 'scissors';
-    }
-
+    const randomNumber = Math.floor(Math.random() * 3);
+    if (randomNumber === 0) return 'rock';
+    if (randomNumber === 1) return 'paper';
+    if (randomNumber === 2) return 'scissors';
 }
+
+
 
 // A function that plays a single round of the game
 

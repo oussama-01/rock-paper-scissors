@@ -1,6 +1,6 @@
 # rock-paper-scissors
 
-This project is a simple implementation of the classic "rock paper scissors" game.
+This project is an implementation of the classic "rock paper scissors" game.
 
 I use JavaScript to code the logic of the game.
 
