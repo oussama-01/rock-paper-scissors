@@ -1,74 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 /* 
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
 * {
-    border: 1px solid magenta;
+    border: 1px solid rgb(131, 255, 158);
 }
  */
 
-html {
-    box-sizing: border-box;
-}
+html {}
 
 body {
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat',cursive;
+    font-size: 32px;
 
-    border: 10px solid #FF5722;
-
-    font-size: 2rem;
-    text-align: center;
-
-    background-color: ;
-    color: ;
-}
-
-.container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
+
+    height: 96vh;
+
+
+    /*     background-image: url(/home/oussama/Pictures/my_vision_board/fan_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
-button {
-    padding: 20px;
-    margin: 15px;
+
+img {
     width: 200px;
-
-    background-color: #FFC107;
-    color: ;
-
-    font-family: 'Caveat', cursive;
-    font-weight: 600;
-    font-size: 1.5rem;
-
-    border: none;
-    border-radius: 35px;
+    margin: 10px;
 }
 
-
-button:hover {
-    background-color: #FF5722;
-}
-
-button:active {
-    scale: 0.9;
-}
-
-div {
-    margin: 15px;
+img:hover {
+    scale: 1.1;
 
 }
+
+img:active {
+    rotate: 10deg;
+}
+
+/**/
 
 #result {
-    border: 2px solid hotpink;
-
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black;
 }
 
-#pScore,
-#cScore {
-    border: 2px solid navy;
-
-}
-
-#winner {
-    background-color: ;
+.win {
+    font-size: 24px;
+    background-image: url(/home/oussama/Pictures/congratulations_256.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

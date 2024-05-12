@@ -3,42 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Rock Paper Scissors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Rock paper scissors</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
 
+    </style>
 </head>
 
 <body>
+    <div>Player Score: <span id="playerScore">0</span></div>
+    <div>Computer Score: <span id="computerscore">0</span></div>
 
-    <div class="container">
-
-        <div class="buttons">
-            <div id="result">Select below</div>
-
-            <button id="rock">ROCK</button>
-
-            <button id="paper">PAPER</button>
-
-            <button id="scissors">SCISSORS</button>
-
-            <button><img src="/home/oussama/Pictures/leaves_1280.jpg" alt="" width="75px"></button>
-
-        </div>
-
-
-
-        <div class="score">
-
-            <div id="pScore"></div>
-
-            <div id="cScore"></div>
-        </div>
-
+    <div class="images">
+        <img src="./images/stone_640.png" alt="" id="rock">
+        <img src="./images/paper_640.jpg" alt="" id="paper">
+        <img src="./images/scissors_640.png" alt="" id="scissors">
     </div>
 
-    <div id="winner"></div>
+
+    <div id="result"></div>
 
 </body>
 
